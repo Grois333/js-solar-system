@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Create a solar system</title>
+        <style>
+            body {
+                background-color: black;
+                padding: 10px;
+            }
+            .planet {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                text-align: center;
+                padding: 10px;
+                position: relative;
+                background: rgba(169,232,75,1);
+                background: -moz-linear-gradient(left, rgba(169,232,75,1) 0%, rgba(32,124,229,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,232,75,1)), color-stop(100%, rgba(32,124,229,1)));
+                background: -webkit-linear-gradient(left, rgba(169,232,75,1) 0%, rgba(32,124,229,1) 100%);
+                background: -o-linear-gradient(left, rgba(169,232,75,1) 0%, rgba(32,124,229,1) 100%);
+                background: -ms-linear-gradient(left, rgba(169,232,75,1) 0%, rgba(32,124,229,1) 100%);
+                background: linear-gradient(to right, rgba(169,232,75,1) 0%, rgba(32,124,229,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e84b', endColorstr='#207ce5', GradientType=1 );
+            }
+
+            .planet2{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                text-align: center;
+                padding: 7px;
+                position: relative;
+                margin-left: 200px;
+                margin-top: -50px;
+                background: rgba(247,17,48,1);
+                background: -moz-linear-gradient(left, rgba(247,17,48,1) 0%, rgba(242,89,132,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247,17,48,1)), color-stop(100%, rgba(242,89,132,1)));
+                background: -webkit-linear-gradient(left, rgba(247,17,48,1) 0%, rgba(242,89,132,1) 100%);
+                background: -o-linear-gradient(left, rgba(247,17,48,1) 0%, rgba(242,89,132,1) 100%);
+                background: -ms-linear-gradient(left, rgba(247,17,48,1) 0%, rgba(242,89,132,1) 100%);
+                background: linear-gradient(to right, rgba(247,17,48,1) 0%, rgba(242,89,132,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f71130', endColorstr='#f25984', GradientType=1 );
+
+            }
+
+            .planet3{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                text-align: center;
+                padding: 80px;
+                position: relative;
+                margin-left: 400px;
+                margin-top: -50px;
+                background: rgba(245,162,17,1);
+                background: -moz-linear-gradient(left, rgba(245,162,17,1) 0%, rgba(166,76,7,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,162,17,1)), color-stop(100%, rgba(166,76,7,1)));
+                background: -webkit-linear-gradient(left, rgba(245,162,17,1) 0%, rgba(166,76,7,1) 100%);
+                background: -o-linear-gradient(left, rgba(245,162,17,1) 0%, rgba(166,76,7,1) 100%);
+                background: -ms-linear-gradient(left, rgba(245,162,17,1) 0%, rgba(166,76,7,1) 100%);
+                background: linear-gradient(to right, rgba(245,162,17,1) 0%, rgba(166,76,7,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5a211', endColorstr='#a64c07', GradientType=1 );
+            }
+
+            .planet4{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                text-align: center;
+                padding: 40px;
+                position: relative;
+                margin-left: 800px;
+                margin-top: -80px;
+                background-color: #dab97b;
+
+                background: linear-gradient(khaki, khaki,darkkhaki,darkkhaki,darkkhaki,khaki,darkkhaki,khaki,khaki,darkkhaki,darkkhaki,khaki,khaki,khaki,darkkhaki,darkkhaki);
+                transform:rotate(35deg);
+                z-index:2;
+                
+            }
+
+            .ring{
+
+                border-style:double;
+                position:relative;
+                width:100pt;
+                height:100pt;
+                border-width:40px;
+                border-radius:10000px;
+                margin-top:-200px;
+                margin-left:780px;
+                border-color:darkkhaki;
+                transform:skew(45deg);
+                z-index:2;
+
+            }
+
+            
+            
+
+            .planet5{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                text-align: center;
+                padding: 25px;
+                position: relative;
+                margin-left: 1100px;
+                margin-top: -50px;
+                background-color: blue;
+                background: rgba(50,18,230,1);
+                background: -moz-linear-gradient(left, rgba(50,18,230,1) 0%, rgba(171,3,237,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(50,18,230,1)), color-stop(100%, rgba(171,3,237,1)));
+                background: -webkit-linear-gradient(left, rgba(50,18,230,1) 0%, rgba(171,3,237,1) 100%);
+                background: -o-linear-gradient(left, rgba(50,18,230,1) 0%, rgba(171,3,237,1) 100%);
+                background: -ms-linear-gradient(left, rgba(50,18,230,1) 0%, rgba(171,3,237,1) 100%);
+                background: linear-gradient(to right, rgba(50,18,230,1) 0%, rgba(171,3,237,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3212e6', endColorstr='#ab03ed', GradientType=1 );
+            }
+            
+            .moon {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: rgb(237, 237, 237);
+            }
+        </style>
+    </head>
+    <body>
+
+
+    <script>
+
+        //alert("test");
+
+        var luna = document.createElement("DIV");
+        console.log(luna);
+        luna.classList.add("moon");
+        document.body.appendChild(luna);
+
+        var plan = document.createElement("DIV");
+        console.log(plan);
+        plan.classList.add("planet");
+        document.body.appendChild(plan);
+
+        var plan2 = document.createElement("DIV");
+        console.log(plan2);
+        plan2.classList.add("planet2");
+        document.body.appendChild(plan2);
+
+        var plan3 = document.createElement("DIV");
+        console.log(plan3);
+        plan3.classList.add("planet3");
+        document.body.appendChild(plan3);
+
+
+        var plan4 = document.createElement("DIV");
+        console.log(plan4);
+        plan4.classList.add("planet4");
+        document.body.appendChild(plan4);
+
+        var ring = document.createElement("DIV");
+        console.log(ring);
+        ring.classList.add("ring");
+        document.body.appendChild(ring);
+
+
+        var plan5 = document.createElement("DIV");
+        console.log(plan5);
+        plan5.classList.add("planet5");
+        document.body.appendChild(plan5);
+
+    </script>
+    </body>
+</html>
